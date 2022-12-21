@@ -1,40 +1,88 @@
 html,
 body {
-  margin: 0px;
-  margin-right: -93px;
+  margin: 0;
   overflow-x: hidden;
 }
 
 nav {
-  background-image: linear-gradient(to top left, #3b713b, #37e7f0);
+  background-image: linear-gradient(to bottom, #42a4a1, #1dd4aa);
   box-shadow: 2px 2px 23px 2px;
 }
-nav a {
+
+nav .a:hover {
+  color: #ffffff !important;
+}
+
+.a {
+  position: relative;
+  text-decoration: none;
+  letter-spacing: 0.5px;
   color: #f5deb3 !important;
   font-size: 20px !important;
   padding-right: 36px !important;
 }
 
+.a:after {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  color: #fff;
+  transition: all 0.2s linear;
+}
+
+.a:hover::after {
+  width: 100%;
+  transition: all 0.2s linear;
+  color: #fff;
+}
+
 .IniNavbar h2 {
   color: #fff;
 }
-nav a:hover {
-  color: #fff !important;
-  /* transition: 0.2s;
-  border-bottom: 1px solid pink !important;
-  width: 50px; */
-  border-bottom: 1.5px solid #ffffff !important;
-  width: 100px;
-  transition: 0.2s;
-  background-position: fixed;
-}
 
-nav a:hover::after {
+/* nav a:hover {
+  color: #ffffff !important;
+  transition: 0.2s;
+  border-bottom: 1px solid #f5deb3;
+} */
+
+/* nav a:hover::after {
   width: 100%;
-}
+  CONTEN
+} */
 
 .navbar-togler {
   border: none;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+  transform: translatex(100%);
+}
+
+/* .aktivitas1 {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+  transform: translateY(100%);
+}
+
+.show1 {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+} */
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }
 
 .hero {
@@ -46,19 +94,20 @@ nav a:hover::after {
   background-position: center;
   align-items: center;
   padding-top: 200px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero h1 {
   font-weight: 100;
   font-size: 80px;
   color: #fff;
-  font-family: cursive;
+  font-family: cursive, Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
 .hero p {
   font-size: 20px;
-  font-family: cursive;
+  font-family: cursive, Arial, Helvetica, sans-serif;
   color: #fff;
   text-align: center;
 }
@@ -76,6 +125,14 @@ nav a:hover::after {
   padding-left: 40px;
 }
 
+.content p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#About {
+  padding: 170px;
+}
+
 #About h1 {
   text-align: center;
   font-family: cursive;
@@ -84,7 +141,7 @@ nav a:hover::after {
 }
 
 #About p {
-  font-family: cursive;
+  font-family: cursive, Arial, Helvetica, sans-serif;
   text-align: justify;
   font-size: 30px;
 }
@@ -93,14 +150,29 @@ nav a:hover::after {
   display: flex;
 }
 
-#Facility h2 {
+.kontenBaris p {
+  width: 1320px;
+  font-size: 10px;
+}
+
+#Facility .setsumei {
   width: 55%;
+  font-size: 23.5px;
+  font-weight: bold;
   text-align: justify;
 }
+
+/* .kontenBaris p {
+  font-size: 10px;
+} */
 
 .bagian2 {
   background-color: #e3ecec;
   padding: 40px;
+}
+
+.bagian2 img {
+  padding: 20px;
 }
 
 /* THERE'S NOTHING HAPENNED!
@@ -109,8 +181,9 @@ nav a:hover::after {
   padding: 40px;
 } */
 /* ini JUDULLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL */
+
 #Facility h1 {
-  font-family: "La Belle Aurore", sans-serif;
+  font-family: "La Belle Aurore", Arial, sans-serif;
   font-weight: 100;
   font-size: 100px;
   text-align: center;
@@ -119,7 +192,7 @@ nav a:hover::after {
 }
 
 #facility h2 {
-  font-family: "Nunito", cursive;
+  font-family: "Nunito", Arial, cursive;
   font-weight: bold;
   font-size: 30px;
   width: 1100px;
@@ -127,8 +200,16 @@ nav a:hover::after {
   text-align: justify;
 }
 
+.end img {
+  padding-right: 100px;
+}
+
+.mencoba #photo1 {
+  padding-right: 100px;
+}
+
 #Facility p {
-  font-size: 35px;
+  font-size: 25px;
   text-align: justify;
 }
 
@@ -148,6 +229,7 @@ nav a:hover::after {
   padding: 4px 20px;
   background-color: #dbbe17;
   color: white;
+  transition: all 0.2s linear;
 }
 
 #tsumami:hover {
@@ -158,10 +240,9 @@ nav a:hover::after {
 
 .end img {
   border-radius: 30%;
-  width: 800px;
-  height: 600px;
+  width: 600px;
+  height: 400px;
   margin-right: 100px;
-  padding-left: 20px;
   padding-top: 100px;
 }
 
@@ -177,14 +258,26 @@ nav a:hover::after {
   display: flex;
 }
 
-.mokuji h1 {
-  background-color: #d8841d;
-  border-radius: 20px;
-  padding: 14px 20px;
-  text-align: center;
+.kegiatan1 p {
+  padding: 100px;
+  font-size: 30px;
+  text-align: justify;
+}
+
+.kegiatan1 img {
+  padding: 20px;
+}
+
+.event img {
+  padding-left: 30px;
 }
 
 .mokuji h1 {
+  background-image: linear-gradient(to right top, #77d2b7, #6f6fec);
+  border-radius: 20px;
+  padding: 14px 20px;
+  text-align: center;
+  color: #fff;
   padding: 20px;
 }
 
@@ -227,13 +320,15 @@ nav a:hover::after {
   top: 0;
   left: 0;
   width: 50%;
-  height: 47%;
+  height: 42%;
   background: #68656599;
   color: #fff;
   display: flex;
+  margin-left: 30px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s linear;
 }
 
 .image__overlay:hover {
@@ -263,10 +358,12 @@ nav a:hover::after {
   top: 0;
   left: 0;
   width: 50%;
+  margin-left: 30px;
   font-size: 30px;
-  height: 47%;
+  height: 42%;
   background: #68656599;
   color: #fff;
+  transition: all 0.2s linear;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -280,20 +377,45 @@ nav a:hover::after {
   transition: 0.6s;
 }
 
+.image p,
+.image2 p {
+  font-size: 18px;
+}
+
+/* =-==============================AWLKDNKJAWNDAWLKDN======= */
+.mainKegiatan {
+  opacity: 1;
+}
+/* =====================================AWDAWDAWDWADAWD======== */
+
+.teks .kegiatan1 h1 {
+  opacity: 0;
+}
+
+.kegiatan1 p {
+  opacity: 0;
+}
+
 .mainKegiatanParagraph1 {
   padding: 20px;
   font-size: 30px;
   text-align: justify;
+  opacity: 1;
 }
 
-.kegiatan {
+/* .kegiatan {
   padding: 200px 90px;
   height: auto;
   background-color: #e3ecec;
+} */
+
+.kegiatan1 {
+  padding: 30px;
 }
 
 .drama {
-  padding: 20px 20px;
+  padding-top: 30px;
+  padding-right: 110px;
   font-size: 30px;
   text-align: justify;
 }
@@ -302,18 +424,32 @@ nav a:hover::after {
   font-size: 30px;
 }
 
+.teks p {
+  font-size: 20px;
+}
+
 .judul {
   opacity: 0;
   text-align: center;
+  padding-top: 200px;
 }
 
-.paragrafKegiatan1 p {
+#Judul {
+  font-size: 50px;
+}
+
+#foto1 {
+  width: 800px;
+  height: 540px;
+}
+
+.paragrafKegiatan1 {
   opacity: 0;
 }
 
 .lastParagraf p {
   padding: 20px;
-  font-size: 30px;
+  font-size: 20px;
   text-align: justify;
 }
 
@@ -323,17 +459,19 @@ nav a:hover::after {
 
 footer {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 20px;
   color: #fff;
-  background-color: #809197;
+  background-color: #42a4a1;
+  background-image: linear-gradient(to top, #42a4a1, #1dd4aa);
+  padding-bottom: 20px;
 }
 
 .container {
   color: rgb(255, 255, 255);
+  text-align: center;
 }
 
 .copyright p {
-  margin-left: 60px;
+  margin: 0 auto;
 }
 
 .socialMedia img:hover {
@@ -341,8 +479,6 @@ footer {
 }
 
 footer .container {
-  display: flex;
-  justify-content: space-between;
 }
 
 /* ==================================================================== */
@@ -382,11 +518,19 @@ footer .container {
     background-position: center;
   }
 
-  #Facility h2 {
+  #Facility .setsumei {
     font-size: 30px;
     padding: 20px;
     width: 100%;
     text-align: justify;
+  }
+
+  .bagian2 #Facility h2 {
+    width: 90%;
+  }
+
+  .bagian2 .kontenBaris p {
+    width: 90%;
   }
 
   .kontenBaris p {
@@ -406,6 +550,10 @@ footer .container {
     background-position: center;
     width: 100%;
     height: 100%;
+  }
+
+  .mencoba #photo1 {
+    padding-right: 90px;
   }
 }
 
@@ -427,6 +575,14 @@ footer .container {
   .mokuji img {
     width: 300px;
     height: 280px;
+  }
+
+  .bagian2 #Facility h2 {
+    width: 90%;
+  }
+
+  .bagian2 .kontenBaris p {
+    width: 90%;
   }
 
   .image__overlay:hover {
@@ -468,8 +624,9 @@ footer .container {
     font-size: 30px;
     opacity: 1;
   }
-  .kegiatan1 {
-    padding: 22px;
+
+  .teks .mainKegiatan1 h1 {
+    color: #0fc3ff;
   }
   .mainKegiatanParagraph1 {
     opacity: 0;
@@ -489,12 +646,17 @@ footer .container {
     opacity: 1;
   }
 
-  .paragrafKegiatan1 p {
+  .kontenBaris p {
+    width: 720px;
+  }
+
+  .paragrafKegiatan1 {
     padding: 20px;
     font-size: 30px;
     text-align: justify;
     opacity: 1;
   }
+
   .teks {
     padding: 20px;
     font-size: 30px;
@@ -514,7 +676,7 @@ footer .container {
   }
 
   .lastParagrafR p {
-    padding: 20px;
+    padding: 30px;
     font-size: 30px;
     text-align: justify;
     opacity: 1;
@@ -526,5 +688,85 @@ footer .container {
 
   #Facility p {
     font-size: 26px;
+  }
+}
+
+/* HAPE SAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+@media (max-width: 426px) {
+  html,
+  body {
+    width: 460px;
+  }
+
+  .content p {
+    margin-left: -50px;
+    padding: 30px;
+  }
+
+  .main {
+    margin: 0;
+    padding: 0;
+  }
+
+  #About {
+    height: auto;
+  }
+
+  #Facility h1 {
+    font-size: 80px;
+  }
+
+  #Facility .setsumei {
+    width: auto;
+    font-size: 20px;
+  }
+
+  #Facility .kontenBaris p {
+    width: auto;
+    font-size: 20px;
+  }
+
+  .mencoba {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .mencoba #photo1 {
+    width: 450px;
+    height: 270px;
+  }
+
+  .end img {
+    width: 450px;
+    height: 340px;
+  }
+
+  .teks p {
+    font-size: 23px;
+  }
+
+  .image p {
+    font-size: 22px;
+  }
+
+  .image2 p {
+    font-size: 22px;
+  }
+
+  .paragrafKegiatan1 p {
+    font-size: 23px;
+  }
+
+  .teks .drama {
+    font-size: 23px;
+  }
+
+  .lastParagrafR p {
+    font-size: 23px;
+  }
+  nav a:hover {
+    color: #ffffff !important;
+    transition: 0.2s;
+    border-bottom: none;
   }
 }
